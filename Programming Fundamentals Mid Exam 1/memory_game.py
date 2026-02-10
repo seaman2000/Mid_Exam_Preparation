@@ -1,7 +1,6 @@
-sequence_of_elements = list(map(int, input().split()))
-cloned = [x for x in sequence_of_elements for _ in range(2)]
+sequence = input().split()
+
 moves = 0
-is_successful = False
 
 while True:
     command = input()
@@ -9,36 +8,35 @@ while True:
         break
 
     moves += 1
-    parts = command.split()
-    first_idx = int(parts[0])
-    second_idx = int(parts[1])
+    first_idx, second_idx = map(int, command.split())
 
-    if (
+    invalid = (
         first_idx == second_idx or
-        not 0 <= first_idx < len(cloned) or
-        not 0 <= second_idx < len(cloned)
-    ):
+        not 0 <= first_idx < len(sequence) or
+        not 0 <= second_idx < len(sequence)
+    )
+
+    if invalid:
         print("Invalid input! Adding additional elements to the board")
-        index = len(cloned) // 2
-        penalty = f"{moves}-a"
-        cloned.insert(index, penalty)
-        cloned.insert(index, penalty)
+        middle = len(sequence) // 2
+        penalty = f"-{moves}a"
+        sequence.insert(middle, penalty)
+        sequence.insert(middle, penalty)
         continue
 
-    elif cloned[first_idx] == cloned[second_idx]:
-        print(f"Congrats! You have found matching elements - {cloned[first_idx]}")
+    if sequence[first_idx] == sequence[second_idx]:
+        element = sequence[first_idx]
+        print(f"Congrats! You have found matching elements - {element}!")
 
         for idx in sorted([first_idx, second_idx], reverse=True):
-            cloned.pop(idx)
-        if not cloned:
-            is_successful = True
-            break
+            sequence.pop(idx)
 
-    elif cloned[first_idx] != cloned[second_idx]:
+        if not sequence:
+            print(f"You have won in {moves} turns!")
+            break
+    else:
         print("Try again!")
 
-if is_successful:
-    print(f"You have won in {moves} turns!")
-else:
-    print(f"Sorry you lose :(\n"
-    f"{' '.join(map(str, cloned))}")
+if sequence:
+    print("Sorry you lose :(")
+    print(" ".join(sequence))
