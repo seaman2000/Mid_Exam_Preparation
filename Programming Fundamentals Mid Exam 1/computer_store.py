@@ -3,6 +3,7 @@ taxes = 0.00
 
 while True:
     command = input()
+    
     if command == "special" or command == "regular":
         break
     if float(command) < 0:
