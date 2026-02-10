@@ -22,13 +22,14 @@ while True:
         cloned.insert(index, penalty)
         cloned.insert(index, penalty)
 
-    if cloned[first_idx] == cloned[second_idx]:
+    elif cloned[first_idx] == cloned[second_idx]:
         print(f"Congrats! You have found matching elements - {cloned[first_idx]}")
-        cloned = [num for num in cloned if num !=cloned[first_idx]]
+        for idx
         right_guesses += 1
-        if right_guesses == len(cloned) // 2:
+        if not cloned:
             is_successful = True
             break
+
     elif cloned[first_idx] != cloned[second_idx]:
         print("Try again!")
 
