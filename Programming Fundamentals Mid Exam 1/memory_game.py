@@ -24,7 +24,7 @@ while True:
 
     elif cloned[first_idx] == cloned[second_idx]:
         print(f"Congrats! You have found matching elements - {cloned[first_idx]}")
-        for idx
+        for idx in sorted(first_idx, second_idx, reverse=True)
         right_guesses += 1
         if not cloned:
             is_successful = True
