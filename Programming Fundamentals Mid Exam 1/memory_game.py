@@ -1,7 +1,6 @@
 sequence = input().split()
 
 moves = 0
-
 while True:
     command = input()
     if command == "end":
@@ -9,7 +8,6 @@ while True:
 
     moves += 1
     first_idx, second_idx = map(int, command.split())
-
     invalid = (
         first_idx == second_idx or
         not 0 <= first_idx < len(sequence) or
