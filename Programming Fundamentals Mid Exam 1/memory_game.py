@@ -1,8 +1,8 @@
 sequence_of_elements = list(map(int, input().split()))
 cloned = [x for x in sequence_of_elements for _ in range(2)]
 moves = 0
-right_guesses = 0
 is_successful = False
+
 while True:
     command = input()
     if command == "end":
@@ -27,7 +27,6 @@ while True:
         print(f"Congrats! You have found matching elements - {cloned[first_idx]}")
         for idx in sorted([first_idx, second_idx], reverse=True):
             cloned.pop(idx)
-        right_guesses += 1
         if not cloned:
             is_successful = True
             break
@@ -39,4 +38,4 @@ if is_successful:
     print(f"You have won in {moves} turns!")
 else:
     print(f"Sorry you lose :(\n"
-    f"{cloned}")
+    f"{' '.join(map(str, cloned))}")
