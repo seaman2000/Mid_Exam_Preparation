@@ -7,10 +7,12 @@ while True:
     command = input()
     if command == "end":
         break
+
     moves += 1
     parts = command.split()
     first_idx = int(parts[0])
     second_idx = int(parts[1])
+
     if (
         first_idx == second_idx or
         not 0 <= first_idx < len(cloned) or
@@ -25,6 +27,7 @@ while True:
 
     elif cloned[first_idx] == cloned[second_idx]:
         print(f"Congrats! You have found matching elements - {cloned[first_idx]}")
+
         for idx in sorted([first_idx, second_idx], reverse=True):
             cloned.pop(idx)
         if not cloned:
