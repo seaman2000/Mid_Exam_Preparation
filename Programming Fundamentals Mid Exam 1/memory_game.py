@@ -21,10 +21,12 @@ while True:
         penalty = f"{moves}-a"
         cloned.insert(index, penalty)
         cloned.insert(index, penalty)
+        continue
 
     elif cloned[first_idx] == cloned[second_idx]:
         print(f"Congrats! You have found matching elements - {cloned[first_idx]}")
-        for idx in sorted(first_idx, second_idx, reverse=True)
+        for idx in sorted([first_idx, second_idx], reverse=True):
+            cloned.pop(idx)
         right_guesses += 1
         if not cloned:
             is_successful = True
