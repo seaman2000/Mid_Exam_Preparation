@@ -19,7 +19,7 @@ while True:
         second_element = int(parts[2])
         result = integers_array[first_element] * integers_array[second_element]
         integers_array.pop(first_element)
-        integers_array.insert(first_element - 1, result)
+        integers_array.insert(first_element, result)
 
     elif type_of_action == "decrease":
         integers_array = [num - 1 for num in integers_array]
