@@ -6,6 +6,7 @@ students_count = int(input())
 
 students_per_hour_handled = first_employee + second_employee + third_employee
 hours = 0
+
 while students_count > 0:
     hours += 1
 
