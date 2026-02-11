@@ -2,16 +2,18 @@ integers_array = list(map(int, input().split()))
 
 while True:
     command = input()
-    
+
     if command == "end":
         break
     parts = command.split()
     type_of_action = parts[0]
 
     if type_of_action == "swap":
-        first_element = parts[1]
-        second_element = parts[2]
-
+        first_element = int(parts[1])
+        second_element = int(parts[2])
+        a, b = first_element, second_element
+        integers_array[a], integers_array[b] = integers_array[b], integers_array[a]
+        
     elif type_of_action == "multiply":
         first_element = int(parts[1])
         second_element = int(parts[2])
