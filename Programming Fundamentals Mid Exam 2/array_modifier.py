@@ -17,9 +17,7 @@ while True:
     elif type_of_action == "multiply":
         first_element = int(parts[1])
         second_element = int(parts[2])
-        result = integers_array[first_element] * integers_array[second_element]
-        integers_array.pop(first_element)
-        integers_array.insert(first_element, result)
+        integers_array[first_element] *= integers_array[second_element]
 
     elif type_of_action == "decrease":
         integers_array = [num - 1 for num in integers_array]
