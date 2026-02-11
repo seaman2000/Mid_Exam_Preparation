@@ -13,12 +13,12 @@ while True:
         second_element = int(parts[2])
         a, b = first_element, second_element
         integers_array[a], integers_array[b] = integers_array[b], integers_array[a]
-        
+
     elif type_of_action == "multiply":
         first_element = int(parts[1])
         second_element = int(parts[2])
         result = integers_array[first_element] * integers_array[second_element]
-        integers_array.pop(integers_array[first_element])
+        integers_array.pop(first_element)
         integers_array.insert(first_element - 1, result)
 
     elif type_of_action == "decrease":
