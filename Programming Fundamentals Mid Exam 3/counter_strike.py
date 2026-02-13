@@ -7,11 +7,13 @@ while True:
     if command == "End of battle":
         print(f"Won battles: {won_battles}. Energy left: {initial_energy}")
         break
-    if initial_energy <= 0:
+
+    distance = int(command)
+
+    if initial_energy < distance:
         print(f"Not enough energy! Game ends with {won_battles} won battles and {initial_energy} energy")
         break
 
-    distance = int(command)
     initial_energy -= distance
     won_battles += 1
 
