@@ -5,11 +5,14 @@ while True:
     command = input()
     if command == "Love!":
         break
+
     parts = command.split()
     length = int(parts[1])
     current_position += length
+
     if current_position >= len(even_list):
         current_position = 0
+        
     if even_list[current_position] == 0:
         print(f"Place {current_position} already had Valentine's day.")
     else:
