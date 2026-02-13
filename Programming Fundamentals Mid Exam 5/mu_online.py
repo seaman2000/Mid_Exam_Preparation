@@ -9,12 +9,12 @@ for room in range(len(dungeons_rooms)):
     action = parts[0]
     value = int(parts[1])
     if action == "potion":
+        old_health = initial_health
         initial_health += value
         if initial_health > 100:
-            value = initial_health - 100
             initial_health = 100
-
-        print(f"You healed for {value} hp.")
+        healed = initial_health - old_health
+        print(f"You healed for {healed} hp.")
         print(f"Current health: {initial_health} hp.")
 
     elif action == "chest":
