@@ -1,5 +1,6 @@
 even_list = list(map(int, input().split("@")))
 current_position = 0
+
 while True:
     command = input()
     if command == "Love!":
