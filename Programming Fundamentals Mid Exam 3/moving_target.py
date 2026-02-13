@@ -7,6 +7,7 @@ while True:
     action = parts[0]
     idx = int(parts[1])
     valid = idx in range(len(sequence_of_targets))
+    
     if action == "Shoot":
         power = int(parts[2])
         if valid:
