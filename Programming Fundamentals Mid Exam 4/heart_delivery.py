@@ -5,21 +5,21 @@ while True:
     if command == "Love!":
         break
     parts = command.split()
-    action = parts[0]
     length = int(parts[1])
     current_position += length
-    if current_position >= len(even_list):
-        current_position = 0
+    current_position %= len(even_list)
+
     if even_list[current_position] == 0:
-        print(f"Place {even_list[current_position]} already had Valentine's day.")
+        print(f"Place {current_position} already had Valentine's day.")
     else:
         even_list[current_position] -= 2
         if even_list[current_position] == 0:
-            print(f"Place {even_list[current_position]} has Valentine's day.")
+            print(f"Place {current_position} has Valentine's day.")
 
 print(f"Cupid's last position was {current_position}.")
-loved_houses = [house for house in range(len(even_list)) if even_list[house] != 0]
+loved_houses = [house for house in even_list if house != 0]
+
 if loved_houses:
     print(f"Cupid has failed {len(loved_houses)} places.")
 else:
-    print("Mission successful.")
+    print("Mission was successful.")
