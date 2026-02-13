@@ -1,4 +1,5 @@
 sequence_of_targets = list(map(int, input().split()))
+
 while True:
     command = input()
     if command == "End":
