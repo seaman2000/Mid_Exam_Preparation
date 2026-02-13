@@ -11,6 +11,7 @@ for room in range(len(dungeons_rooms)):
     if action == "potion":
         initial_health += value
         if initial_health > 100:
+            value = initial_health - 100
             initial_health = 100
 
         print(f"You healed for {value} hp.")
@@ -23,7 +24,7 @@ for room in range(len(dungeons_rooms)):
     else:
         initial_health -= value
         if initial_health > 0:
-            print(f"You slayed {action}")
+            print(f"You slayed {action}.")
         else:
             print(f"You died! Killed by {action}.")
             print(f"Best room: {current_room_number}")
