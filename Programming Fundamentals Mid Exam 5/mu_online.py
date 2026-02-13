@@ -1,11 +1,13 @@
 dungeons_rooms = input().split("|")
 initial_health = 100
 bitcoins = 0
-
+current_room_number = 0
+dead = False
 for room in range(len(dungeons_rooms)):
-    action = dungeons_rooms[0]
-    value = int(dungeons_rooms[1])
-
+    current_room_number += 1
+    parts = dungeons_rooms[room].split()
+    action = parts[0]
+    value = int(parts[1])
     if action == "potion":
         initial_health += value
         if initial_health > 100:
@@ -22,8 +24,12 @@ for room in range(len(dungeons_rooms)):
             print(f"You slayed {action}")
         else:
             print(f"You died! Killed by {action}.")
-            print(f"Best room: {room}")
+            print(f"Best room: {current_room_number}")
+            dead = True
+            break
 
-print(f"You've made it!\n"
-    f"Bitcoins: {bitcoins}\n"
-    f"Health: {initial_health}")
+
+if not dead:
+    print(f"You've made it!\n"
+        f"Bitcoins: {bitcoins}\n"
+        f"Health: {initial_health}")
