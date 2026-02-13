@@ -12,6 +12,8 @@ for room in range(len(dungeons_rooms)):
         initial_health += value
         if initial_health > 100:
             initial_health = 100
+
+        print(f"You healed for {value} hp.")
         print(f"Current health: {initial_health} hp.")
 
     elif action == "chest":
