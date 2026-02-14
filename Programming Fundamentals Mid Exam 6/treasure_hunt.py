@@ -20,11 +20,17 @@ while True:
 
     elif action == "Steal":
         count = int(parts[1])
-        stolen_items = initial_loot[:count -1:-1]
-        del initial_loot[:count -1: -1]
+        if count >= len(initial_loot):
+            print(', '.join(initial_loot))
+            initial_loot = []
+        else:
+            stolen_items = initial_loot[:count + 1:-1]
+            del initial_loot[:count + 1: -1]
+            stolen_items.reverse()
+            print(', '.join(stolen_items))
 
 if initial_loot:
-    all_length = 0
+    all_length = 0.00
     for item in initial_loot:
         all_length += len(item)
     average_gain = all_length / len(initial_loot)
