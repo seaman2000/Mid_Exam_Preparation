@@ -19,7 +19,8 @@ for _ in range(count_of_commands):
         if 0 <= number_of_songs < len(list_of_songs):
             deleted = list_of_songs[:number_of_songs]
             del list_of_songs[:number_of_songs]
-            print(', '.join(deleted))
+            print(f"{', '.join(deleted)} deleted")
+            
     elif action == "Shuffle Songs":
         first_song = int(parts[1])
         second_song = int(parts[2])
