@@ -4,6 +4,7 @@ total_items_collected = 0
 
 while True:
     command = input()
+
     if command == "Adventure over":
         break
     if command.startswith("Step"):

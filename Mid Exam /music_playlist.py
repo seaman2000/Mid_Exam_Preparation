@@ -1,5 +1,6 @@
 list_of_songs = input().split()
 count_of_commands = int(input())
+
 for _ in range(count_of_commands):
     command = input()
 
@@ -20,7 +21,7 @@ for _ in range(count_of_commands):
             deleted = list_of_songs[:number_of_songs]
             del list_of_songs[:number_of_songs]
             print(f"{', '.join(deleted)} deleted")
-            
+
     elif action == "Shuffle Songs":
         first_song = int(parts[1])
         second_song = int(parts[2])

@@ -19,6 +19,7 @@ while True:
             if artifact_parts_found == 3:
                 all_are_found = True
                 break
+                
     elif command  == "desert":
         initial_energy -= 15
 
