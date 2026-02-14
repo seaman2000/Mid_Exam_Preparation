@@ -12,12 +12,14 @@ for _ in range(count_of_commands):
         song = parts[1]
         if song not in list_of_songs:
             list_of_songs.append(song)
+            print(f"{song} successfully added")
 
     elif action == "Delete Song":
         number_of_songs = int(parts[1])
         if 0 <= number_of_songs < len(list_of_songs):
+            deleted = list_of_songs[:number_of_songs]
             del list_of_songs[:number_of_songs]
-
+            print(', '.join(deleted))
     elif action == "Shuffle Songs":
         first_song = int(parts[1])
         second_song = int(parts[2])
@@ -34,6 +36,7 @@ for _ in range(count_of_commands):
         if 0 <= idx < len(list_of_songs):
             if song_name not in list_of_songs:
                 list_of_songs.insert(idx, song_name)
+                print(f"{song_name} successfully inserted")
             else:
                 print("Song is already in the playlist")
         else:
