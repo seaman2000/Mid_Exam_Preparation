@@ -2,6 +2,7 @@ journal = input().split(", ")
 
 while True:
     command = input()
+    
     if command == "Craft!":
         break
     parts = command.split(" - ")
