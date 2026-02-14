@@ -19,11 +19,11 @@ for _ in range(count_of_commands):
             del list_of_songs[:number_of_songs]
 
     elif action == "Shuffle Songs":
-        first_song = parts[1]
-        second_song = parts[2]
-        if first_song in len(list_of_songs) and second_song in len(list_of_songs):
-            idx_first = list_of_songs.index(first_song)
-            idx_second = list_of_songs.index(second_song)
+        first_song = int(parts[1])
+        second_song = int(parts[2])
+        if 0 <= first_song < len(list_of_songs) and 0 <= second_song < len(list_of_songs):
+            idx_first = list_of_songs.index(list_of_songs[first_song])
+            idx_second = list_of_songs.index(list_of_songs[second_song])
             a, b = idx_first, idx_second
             list_of_songs[a], list_of_songs[b] = list_of_songs[b], list_of_songs[a]
             print(f"{list_of_songs[a]} is swapped with {list_of_songs[b]}")
