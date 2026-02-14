@@ -24,9 +24,8 @@ while True:
             print(', '.join(initial_loot))
             initial_loot = []
         else:
-            stolen_items = initial_loot[:count + 1:-1]
-            del initial_loot[:count + 1: -1]
-            stolen_items.reverse()
+            stolen_items = initial_loot[-count:]
+            del initial_loot[-count:]
             print(', '.join(stolen_items))
 
 if initial_loot:
