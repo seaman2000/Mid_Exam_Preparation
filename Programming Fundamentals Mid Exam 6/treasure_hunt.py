@@ -16,4 +16,6 @@ while True:
             initial_loot.append(initial_loot[index])
     elif action == "Steal":
         count = int(parts[1])
-        del initial_loot[:count - 1:-1]
+        stolen_items = initial_loot[:count -1:-1]
+        del initial_loot[:count -1: -1]
+        
