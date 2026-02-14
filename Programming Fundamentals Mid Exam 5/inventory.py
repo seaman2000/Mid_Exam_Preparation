@@ -22,7 +22,7 @@ while True:
         if old_item in journal:
             idx = journal.index(old_item)
             journal.insert(idx + 1, new_item)
-            
+
     elif action == "Renew":
         if valid_item:
             journal.remove(item)
