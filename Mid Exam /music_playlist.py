@@ -26,10 +26,7 @@ for _ in range(count_of_commands):
         first_song = int(parts[1])
         second_song = int(parts[2])
         if 0 <= first_song < len(list_of_songs) and 0 <= second_song < len(list_of_songs):
-            idx_first = list_of_songs.index(list_of_songs[first_song])
-            idx_second = list_of_songs.index(list_of_songs[second_song])
-            a, b = idx_first, idx_second
-            list_of_songs[a], list_of_songs[b] = list_of_songs[b], list_of_songs[a]
+            list_of_songs[first_song], list_of_songs[second_song] = list_of_songs[second_song], list_of_songs[first_song]
             print(f"{list_of_songs[a]} is swapped with {list_of_songs[b]}")
 
     elif action == "Insert":
