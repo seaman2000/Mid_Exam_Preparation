@@ -61,6 +61,6 @@ while True:
 if not lost_fight and not won_fight:
 
     print(f"Pirate ship status: {sum(pirate_ship_status)}\n"
-          f"Warship status : {sum(warship_status)}")
+          f"Warship status: {sum(warship_status)}")
 
 
