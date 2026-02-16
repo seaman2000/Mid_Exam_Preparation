@@ -47,18 +47,3 @@ A playlist management program that simulates basic music library functionality.
 
 ### 🎯 Goal
 Implement a simplified music playlist manager using Python fundamentals.
-
----
-
-## 🛠️ Tech Stack
-
-- 🐍 Python 3
-- 💻 Console-based applications
-- 📚 Programming Fundamentals concepts
-
----
-
-## 🚀 How to Run
-
-```bash
-python file_name.py
