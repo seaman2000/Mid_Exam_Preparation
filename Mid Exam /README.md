@@ -1,4 +1,4 @@
-# 🧠 Mid Exam Preparation
+# 🧠 Mid Exam | 300/300 points
 
 Repository containing solutions for Mid Exam preparation tasks from Programming Fundamentals.
 
