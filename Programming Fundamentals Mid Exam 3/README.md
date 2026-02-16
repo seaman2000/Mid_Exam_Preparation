@@ -1,4 +1,4 @@
-## 🎯 Programming Fundamentals Mid Exam Tasks
+## 🎯 Programming Fundamentals Mid Exam 3
 
 ---
 
