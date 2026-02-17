@@ -44,6 +44,3 @@ A playlist management program that simulates basic music library functionality.
 - 📜 Display current playlist  
 - 🔎 Search or filter songs  
 - ✔️ Input validation  
-
-### 🎯 Goal
-Implement a simplified music playlist manager using Python fundamentals.
