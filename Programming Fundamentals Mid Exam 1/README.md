@@ -41,6 +41,3 @@ A simulation of people filling lift wagons based on available capacity.
 - 🧮 Wagon capacity calculation  
 - 📊 Lift state reporting  
 - ⚠️ Empty spots or waiting people detection  
-
-#### 🎯 Goal
-Fill the lift wagons optimally and report the final lift and queue state.
